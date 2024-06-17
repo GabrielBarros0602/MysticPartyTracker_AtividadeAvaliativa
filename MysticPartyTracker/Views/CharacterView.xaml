@@ -5,12 +5,12 @@
              Title="Ficha de Personagens">
     <VerticalStackLayout Spacing="10" Margin="30">
         <FlexLayout JustifyContent="SpaceBetween">
-            <VerticalStackLayout FlexLayout.Grow="1" Padding="0 20 0 0">
+            <VerticalStackLayout FlexLayout.Grow="1" Padding="0, 20, 0, 0">
                 <Label 
                     Text="Nome do Personagem"
                     />
                 <Entry
-                    Placeholder="Ex: Rodolfo"
+                    Placeholder="Ex: Arthur"
                     />
             </VerticalStackLayout>
             <VerticalStackLayout>
@@ -29,7 +29,7 @@
             />
 
         <Entry 
-            Placeholder="Ex: Arqueiro"
+            Placeholder="Ex: Lutador"
             />
 
         <Label 
@@ -37,7 +37,7 @@
             />
 
         <Entry 
-            Placeholder="Ex: Elfo"
+            Placeholder="Ex: Humano"
             />
 
         <Button 
@@ -46,6 +46,6 @@
             />
 
         <Label Padding="40" HorizontalOptions="Center"
-            Text="FAZER A LISTA DE PERSONAGENS AQUI"/>
+            Text="-"/>
     </VerticalStackLayout>
 </ContentPage>

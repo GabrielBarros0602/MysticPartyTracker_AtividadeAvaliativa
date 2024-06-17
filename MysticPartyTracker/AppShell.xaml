@@ -17,6 +17,11 @@
             Title="Personagens"
             ContentTemplate="{DataTemplate local:CharacterView}"
             Route="Character" />
+
+        <ShellContent
+            Title="Magias"
+            ContentTemplate="{DataTemplate local:SpellsView}"
+            Route="SpellsView" />
     </TabBar>
     
     

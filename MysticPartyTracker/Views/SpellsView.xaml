@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MysticPartyTracker.Views.SpellsView"
+             Title="Lista de Magias">
+    <ScrollView>
+        <VerticalStackLayout>
+
+            <CollectionView ItemsSource="{Binding Postagens}" EmptyView="Não possuimos magias no momento" >
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <VerticalStackLayout>
+                            <Frame
+                        BackgroundColor="WhiteSmoke"
+                        BorderColor="DarkCyan"
+                        Margin="10">
+                                <StackLayout>
+                                    <HorizontalStackLayout>
+
+                                        <Label
+                                 FontAttributes="Bold"
+                                 Text="SpellIndex: "
+                                 FontSize="Small"/>
+                                        <Label
+                                 Text="{Binding Index}"/>
+
+                                        <Label
+                                FontAttributes="Bold"
+                                Text="SpellName: "
+                                FontSize="Small"/>          
+                                        <Label
+                                Text="{Binding Name}"/>
+
+
+                                    </HorizontalStackLayout>
+                                    <BoxView 
+                                BackgroundColor="DarkSlateGray"
+                                HeightRequest="6"
+                                CornerRadius="50"/>
+                                    <HorizontalStackLayout>
+                                        <Label
+                                Text="Level: "
+                                FontSize="Small"
+                                FontAttributes="Bold"/>
+                                        <Label
+                                Text="{Binding Level}"/>
+                                    </HorizontalStackLayout>
+                                    <HorizontalStackLayout>
+                                        <Label
+                                Text="Url: "
+                                FontSize="Small"
+                                FontAttributes="Bold"/>
+                                        <Label
+                                Text="{Binding Url}"/>
+                                    </HorizontalStackLayout>
+                                </StackLayout>
+                            </Frame>
+                        </VerticalStackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <Button
+        Text="Buscar Magias"
+        WidthRequest="160"
+        Command="{Binding GetPostagemAsyncCommand}"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
